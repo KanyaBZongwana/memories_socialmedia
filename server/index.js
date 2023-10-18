@@ -15,6 +15,10 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
+app.get( (req, res) => {
+    res.send('SERVER IS RUNNING')
+} )
+
 //connect with database: mongodb
 const CONNECTION_URL = 'mongodb+srv://nodeconnect:Zongwana25@cluster0.q37gfof.mongodb.net/';
 const PORT = process.env.PORT || 5000;
